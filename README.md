@@ -1,8 +1,8 @@
 # zf_video_cache_plugin
 
-A new Flutter plugin project.
-Plugin that provides media caching capabilities
+Plugin that provides media caching preload capabilities
 No intrusion, supports any player
+\n
 一个提供视频 预加载和缓存 功能的Flutter 插件支持所有播放器
 
 
