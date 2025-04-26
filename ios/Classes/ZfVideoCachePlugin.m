@@ -43,7 +43,7 @@
         NSString *url = call.arguments[@"url"];
         NSInteger cacheSize = [call.arguments[@"cacheSize"] integerValue]; 
 
-        [self preCacheVideoWithURL:url];
+        [self preCacheVideoWithURL:url cacheSize:cacheSize];
         result(nil);
     } else {
     result(FlutterMethodNotImplemented);
@@ -52,7 +52,7 @@
 
 
 // 预缓存视频
-- (void)preCacheVideoWithURL:(NSString *)urlString (NSInteger *)cacheSize {
+- (void)preCacheVideoWithURL:(NSString *)urlString cacheSize:(NSInteger)cacheSize {
     NSURL *originalURL = [NSURL URLWithString:urlString];
     if (!originalURL) {
         NSLog(@"无效的 URL");
@@ -69,7 +69,6 @@
     [request setValue:rangeHeader forHTTPHeaderField:@"Range"]; // 动态设置 Range 请求头
     
     // 2. 发起一个虚假的下载任务（不存储数据，仅触发缓存）
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:proxyURL];
     NSURLSessionDataTask *task = [[NSURLSession sharedSession]
                                    dataTaskWithRequest:request
                                    completionHandler:^(NSData * _Nullable data,
