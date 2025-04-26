@@ -1,7 +1,8 @@
 name: zf_video_cache_plugin
-description: A new Flutter plugin project.
+description: Plugin that provides media caching preload capabilities No intrusion, supports any player.
 version: 0.0.1
-homepage:
+homepage: https://github.com/janiokqf/zf_video_cache_plugin
+repository: https://github.com/janiokqf/zf_video_cache_plugin
 
 environment:
   sdk: '>=2.19.6 <3.0.0'

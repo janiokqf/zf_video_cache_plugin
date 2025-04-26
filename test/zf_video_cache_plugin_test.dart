@@ -10,6 +10,23 @@ class MockZfVideoCachePluginPlatform
 
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
+
+  @override
+  Future<String?> getProxyUrl(String originUrl) async {
+    return "";
+  }
+  @override
+  Future<void> preCacheVideo(String originUrl,int cacheSize) async {
+  }
+  @override
+  Future<void> clearCache() async {
+  }
+  @override
+  Future<int?> getCacheSize() async {
+    return 0;
+  }
+
+
 }
 
 void main() {
