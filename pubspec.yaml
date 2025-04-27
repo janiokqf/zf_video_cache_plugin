@@ -1,11 +1,12 @@
 name: zf_video_cache_plugin
 description: Plugin that provides media caching preload capabilities No intrusion, supports any player.
-version: 0.0.1
+version: 0.0.3
 homepage: https://github.com/janiokqf/zf_video_cache_plugin
 repository: https://github.com/janiokqf/zf_video_cache_plugin
 
 environment:
-  sdk: '>=2.19.6 <3.0.0'
+  #sdk: '>=2.19.6 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
   flutter: ">=2.5.0"
 
 dependencies:
